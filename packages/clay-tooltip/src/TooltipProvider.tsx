@@ -141,10 +141,8 @@ const TooltipProvider = ({
 			isHovered.current = false;
 		}, []),
 		onHide: useCallback(() => {
-			if (!isHovered.current && !isFocused.current) {
-				dispatch({type: 'reset'});
-				close();
-			}
+			dispatch({type: 'reset'});
+			close();
 		}, []),
 		tooltipRef,
 	});
