@@ -920,6 +920,10 @@
         "aliases": ["lines", "list"]
     },
     {
+        "name": "marketplace",
+        "aliases": ["shopping", "commerce"]
+    },
+    {
         "name": "megaphone-full",
         "aliases": [""]
     },

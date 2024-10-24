@@ -663,6 +663,7 @@ const iconsData = {
 	"logout":                   '"log out", "off", "on", "sign", "sign out", "turn"',
 	"magic":                    '"effects", "select", "wand"',
 	"maps":                     '"pin", "location", "place"',
+	"marketplace":              '"shopping", "commerce"',
 	"mark-as-answer":           '"lines", "list", "question"',
 	"mark-as-question":         '"lines", "list"',
 	"merge":                    '"branch", "combine", "incorporate"',
