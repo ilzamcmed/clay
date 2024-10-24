@@ -64,6 +64,11 @@ type Props = {
 	index?: number;
 
 	/**
+	 * Flag to indicate that the option has href.
+	 */
+	href?: string | boolean | undefined;
+
+	/**
 	 * Sets a text value if the component's content is not plain text. This value
 	 * is used in the combobox element to show the selected option.
 	 */
@@ -78,6 +83,7 @@ export function Option({
 	'aria-setsize': ariaSetSize,
 	children,
 	disabled,
+	href,
 	index: _index,
 	keyValue,
 	textValue,
@@ -115,34 +121,66 @@ export function Option({
 
 	return (
 		<li role="presentation">
-			<button
-				{...otherProps}
-				{...hoverProps}
-				aria-describedby={ariaDescribedby}
-				aria-label={ariaLabel}
-				aria-labelledby={ariaLabelledby}
-				aria-posinset={ariaPosInset}
-				aria-selected={selectedKey === keyValue}
-				aria-setsize={ariaSetSize}
-				className={classNames('dropdown-item', {
-					active: selectedKey === keyValue,
-					focus: activeDescendant === keyValue && isFocus,
-					hover: activeDescendant === keyValue && !isFocus,
-				})}
-				disabled={disabled}
-				id={String(keyValue)}
-				onClick={() => onSelectionChange(keyValue!)}
-				role="option"
-				tabIndex={-1}
-			>
-				{selectedKey === keyValue && (
-					<span className="dropdown-item-indicator-start">
-						<Icon symbol="check-small" />
-					</span>
-				)}
+			{href ? (
+				<a
+					{...otherProps}
+					{...hoverProps}
+					aria-describedby={ariaDescribedby}
+					aria-label={ariaLabel}
+					aria-labelledby={ariaLabelledby}
+					aria-posinset={ariaPosInset}
+					aria-selected={selectedKey === keyValue}
+					aria-setsize={ariaSetSize}
+					className={classNames('dropdown-item', {
+						active: selectedKey === keyValue,
+						disabled,
+						focus: activeDescendant === keyValue && isFocus,
+						hover: activeDescendant === keyValue && !isFocus,
+					})}
+					href={href.toString()}
+					id={String(keyValue)}
+					onClick={() => onSelectionChange(keyValue!)}
+					role="option"
+					tabIndex={-1}
+				>
+					{selectedKey === keyValue && (
+						<span className="dropdown-item-indicator-start">
+							<Icon symbol="check-small" />
+						</span>
+					)}
 
-				{children}
-			</button>
+					{children}
+				</a>
+			) : (
+				<button
+					{...otherProps}
+					{...hoverProps}
+					aria-describedby={ariaDescribedby}
+					aria-label={ariaLabel}
+					aria-labelledby={ariaLabelledby}
+					aria-posinset={ariaPosInset}
+					aria-selected={selectedKey === keyValue}
+					aria-setsize={ariaSetSize}
+					className={classNames('dropdown-item', {
+						active: selectedKey === keyValue,
+						focus: activeDescendant === keyValue && isFocus,
+						hover: activeDescendant === keyValue && !isFocus,
+					})}
+					disabled={disabled}
+					id={String(keyValue)}
+					onClick={() => onSelectionChange(keyValue!)}
+					role="option"
+					tabIndex={-1}
+				>
+					{selectedKey === keyValue && (
+						<span className="dropdown-item-indicator-start">
+							<Icon symbol="check-small" />
+						</span>
+					)}
+
+					{children}
+				</button>
+			)}
 		</li>
 	);
 }
