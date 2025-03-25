@@ -65,7 +65,7 @@ exports[`BasicRendering renders by default 1`] = `
         role="dialog"
       >
         <div
-          aria-label="April 2019"
+          aria-label="Use the calendar to choose a Date. Current selection April 2019"
           class="date-picker-calendar"
           role="group"
         >
@@ -79,6 +79,7 @@ exports[`BasicRendering renders by default 1`] = `
                 class="date-picker-nav-item input-date-picker-month"
               >
                 <select
+                  aria-label="Select a month"
                   class="form-control form-control-sm"
                   data-testid="month-select"
                   name="month"
@@ -149,6 +150,7 @@ exports[`BasicRendering renders by default 1`] = `
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
+                  aria-label="Select a year"
                   class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
                 >
@@ -900,7 +902,7 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-label="April 2019"
+          aria-label="Use the calendar to choose a Date. Current selection April 2019"
           class="date-picker-calendar"
           role="group"
         >
@@ -914,6 +916,7 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
                 class="date-picker-nav-item input-date-picker-month"
               >
                 <select
+                  aria-label="Select a month"
                   class="form-control form-control-sm"
                   data-testid="month-select"
                   name="month"
@@ -984,6 +987,7 @@ exports[`BasicRendering renders date picker with dropdown open 1`] = `
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
+                  aria-label="Select a year"
                   class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
                 >
@@ -1767,7 +1771,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-label="April 2019"
+          aria-label="Use the calendar to choose a Date. Current selection April 2019"
           class="date-picker-calendar"
           role="group"
         >
@@ -1781,6 +1785,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
                 class="date-picker-nav-item input-date-picker-month"
               >
                 <select
+                  aria-label="Select a month"
                   class="form-control form-control-sm"
                   data-testid="month-select"
                   name="month"
@@ -1851,6 +1856,7 @@ exports[`BasicRendering renders date picker with time 1`] = `
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
+                  aria-label="Select a year"
                   class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
                 >
@@ -2746,7 +2752,7 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
         style="left: -999px; top: -995px;"
       >
         <div
-          aria-label="April 2019"
+          aria-label="Use the calendar to choose a Date. Current selection April 2019"
           class="date-picker-calendar"
           role="group"
         >
@@ -2760,6 +2766,7 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
                 class="date-picker-nav-item input-date-picker-month"
               >
                 <select
+                  aria-label="Select a month"
                   class="form-control form-control-sm"
                   data-testid="month-select"
                   name="month"
@@ -2830,6 +2837,7 @@ exports[`BasicRendering renders the date picker with years range 1`] = `
                 class="date-picker-nav-item input-date-picker-year"
               >
                 <select
+                  aria-label="Select a year"
                   class="form-control form-control-select form-control-select-secondary form-control-sm"
                   data-testid="year-select"
                 >
