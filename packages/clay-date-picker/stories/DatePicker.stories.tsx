@@ -27,8 +27,12 @@ const ClayDatePickerWithState = (props: {[key: string]: any}) => {
 					buttonDot: 'Go to today',
 					buttonNextMonth: 'Next month',
 					buttonPreviousMonth: 'Previous month',
+					chooseDate:
+						'Use the calendar to choose a Date. Current selection {0}',
 					dialog: 'Choose Date',
 					input: value.toLocaleString(),
+					selectMonth: 'Select a month',
+					selectYear: 'Select a year',
 				}}
 				onChange={setValue}
 				value={value}
@@ -169,6 +173,8 @@ export const DynamicYears = () => {
 				buttonDot: 'Go to today',
 				buttonNextMonth: 'Next month',
 				buttonPreviousMonth: 'Previous month',
+				chooseDate:
+					'Use the calendar to choose a Date. Current selection {0}',
 				input: value.toLocaleString(),
 			}}
 			onChange={(value) => {
