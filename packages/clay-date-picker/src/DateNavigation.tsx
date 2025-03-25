@@ -30,7 +30,15 @@ type Props = {
 };
 
 const ClayDatePickerDateNavigation = ({
-	ariaLabels,
+	ariaLabels = {
+		buttonChooseDate: 'Choose date',
+		buttonDot: 'Select current date',
+		buttonNextMonth: 'Select the next month',
+		buttonPreviousMonth: 'Select the previous month',
+		chooseDate: 'Use the calendar to choose a Date. Current selection {0}',
+		selectMonth: 'Select a month',
+		selectYear: 'Select a year',
+	},
 	currentMonth,
 	disabled,
 	months,
@@ -66,6 +74,7 @@ const ClayDatePickerDateNavigation = ({
 			<div className="date-picker-nav">
 				<div className="date-picker-nav-item input-date-picker-month">
 					<Select
+						aria-label={ariaLabels.selectMonth}
 						disabled={disabled}
 						name="month"
 						onChange={(event) =>
@@ -84,6 +93,7 @@ const ClayDatePickerDateNavigation = ({
 				<div className="date-picker-nav-item input-date-picker-year">
 					<Picker
 						UNSAFE_behavior="secondary"
+						aria-label={ariaLabels.selectYear}
 						className="form-control-sm"
 						data-testid="year-select"
 						disabled={disabled}
